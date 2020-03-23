@@ -1,0 +1,22 @@
+server:
+  port: 8888
+spring:
+  datasource:
+    driverclassname: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/demo
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    database: mysql
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-aliases-package: com.cai.item.pojo
+#jwt:
+#  config:
+#    secret: demo/login+(@login%) #登录校验的秘钥，随便写，越复杂越好
+#    pubKeyPath: E:\\tmp\\rsa\\rsa.pub #公钥地址
+#    priKeyPath: E:\\tmp\\rsa\\rsa.pri # 私钥地址
+#    expire: 30 #过期时间，单位分钟
